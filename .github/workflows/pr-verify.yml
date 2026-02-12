@@ -27,3 +27,6 @@ jobs:
 
     - name: 'Build'
       run: dotnet build --configuration Release ./src/github-actions-demo-app.csproj
+
+    - name: 'Test'
+      run: dotnet test --configuration Release ./test/github-actions-demo-app.Tests.csproj

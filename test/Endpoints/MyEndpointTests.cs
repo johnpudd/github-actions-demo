@@ -1,5 +1,4 @@
 using System.Net.Http.Json;
-using Xunit;
 
 namespace github_actions_demo_app.Tests.Endpoints;
 

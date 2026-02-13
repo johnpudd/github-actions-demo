@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace github_actions_demo_app.Tests.Models;
 
 public class MyResponseTests

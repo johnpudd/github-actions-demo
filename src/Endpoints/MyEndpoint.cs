@@ -12,9 +12,10 @@ public class MyEndpoint : Endpoint<MyRequest, MyResponse>
 
     public override async Task HandleAsync(MyRequest req, CancellationToken ct)
     {
+        var name = string.Join(" ", new[] { req.FirstName, req.LastName }.Where(s => !string.IsNullOrEmpty(s)));
         await Send.OkAsync(new()
         {
-            FullName = req.FirstName + (req.FirstName =="" ||  req.LastName == "") ? " " : "" + req.LastName
+            FullName = name,
             IsOver18 = req.Age >= 18
         });
     }
